@@ -1,0 +1,13 @@
+{
+  "modules": [
+    {
+      "id": "test",
+      "name": "Hello World",
+      "items": [
+        {
+          "type": "TEST"
+        }
+      ]
+    }
+  ]
+}
