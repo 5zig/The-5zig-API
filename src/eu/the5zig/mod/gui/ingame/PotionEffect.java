@@ -53,4 +53,9 @@ public interface PotionEffect extends Comparable<PotionEffect> {
 	 */
 	boolean hasParticles();
 
+	/**
+	 * @return the color of the liquid for this potion.
+	 */
+	int getLiquidColor();
+
 }
