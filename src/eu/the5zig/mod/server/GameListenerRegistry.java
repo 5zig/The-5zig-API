@@ -18,6 +18,8 @@ package eu.the5zig.mod.server;
 
 import eu.the5zig.util.Callback;
 
+import java.util.Set;
+
 /**
  * Utility class that holds all game mode listeners and contains util methods to send & ignore server messages.
  */
@@ -73,6 +75,11 @@ public interface GameListenerRegistry {
 	 * @return the current game mode or {@code null}, if the client does not play on this server instance.
 	 */
 	GameMode getCurrentGameMode();
+
+	/**
+	 * @return a set containing all friends. You can add friends to that list in order to update the online friends module item.
+	 */
+	Set<String> getOnlineFriends();
 
 	/**
 	 * @return true, if the Minecraft client currently plays on the server instance.
