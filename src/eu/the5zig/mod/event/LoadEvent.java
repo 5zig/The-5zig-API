@@ -19,5 +19,5 @@ package eu.the5zig.mod.event;
 /**
  * Fired, when the mod has been loaded.
  */
-public class LoadEvent extends Event {
+public class LoadEvent {
 }
