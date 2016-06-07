@@ -16,6 +16,7 @@
 
 package eu.the5zig.mod.server;
 
+import eu.the5zig.mod.gui.ingame.ItemStack;
 import io.netty.buffer.ByteBuf;
 
 /**
@@ -151,6 +152,17 @@ public abstract class AbstractGameListener<T extends GameMode> {
 	 * @param subTitle the subtitle.
 	 */
 	public void onTitle(T gameMode, String title, String subTitle) {
+	}
+
+	/**
+	 * Called, whenever an {@link ItemStack} gets set into a chest slot.
+	 *
+	 * @param gameMode       the current game mode instance.
+	 * @param containerTitle the title of the chest.
+	 * @param slot           the slot.
+	 * @param itemStack      the item stack.
+	 */
+	public void onChestSetSlot(T gameMode, String containerTitle, int slot, ItemStack itemStack) {
 	}
 
 	/**
