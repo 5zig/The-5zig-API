@@ -73,6 +73,14 @@ public interface ModAPI {
 	void registerModuleItem(Object plugin, String key, Class<? extends AbstractModuleItem> moduleItem, Category category);
 
 	/**
+	 * Checks if the specified module item is currently activate.
+	 *
+	 * @param key the key of the module item.
+	 * @return true, if the module item is currently active
+	 */
+	boolean isModuleItemActive(String key);
+
+	/**
 	 * Registers a new server instance listener.
 	 *
 	 * @param plugin         the plugin instance.
