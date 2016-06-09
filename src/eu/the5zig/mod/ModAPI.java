@@ -258,6 +258,24 @@ public interface ModAPI {
 	String getOpenContainerTitle();
 
 	/**
+	 * @return the selected hotbar item slot
+	 */
+	int getSelectedHotbarSlot();
+
+	/**
+	 * Sets the current hotbar item slot.
+	 *
+	 * @param slot the index of the slot that should be selected. Must be from 0 to 8.
+	 * @throws IndexOutOfBoundsException if the specified slot parameter is either less than zero or greater than 8.
+	 */
+	void setSelectedHotbarSlot(int slot);
+
+	/**
+	 * Simulates a right mouse click / use action of the current item
+	 */
+	void rightClickItem();
+
+	/**
 	 * @return a class, representing a sidebar scoreboard.
 	 */
 	Scoreboard getSideScoreboard();
