@@ -34,4 +34,11 @@ public interface IPatternResult {
 	 */
 	String get(int index);
 
+	/**
+	 * Allows you to ignore the matched message.
+	 *
+	 * @param ignore true, if the matched message should be ignored.
+	 */
+	void ignoreMessage(boolean ignore);
+
 }
