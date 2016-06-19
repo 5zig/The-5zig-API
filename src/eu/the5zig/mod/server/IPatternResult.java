@@ -38,6 +38,7 @@ public interface IPatternResult {
 	 * Allows you to ignore the matched message.
 	 *
 	 * @param ignore true, if the matched message should be ignored.
+	 * @since 1.0.1
 	 */
 	void ignoreMessage(boolean ignore);
 
