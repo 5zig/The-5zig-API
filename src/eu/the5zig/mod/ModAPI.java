@@ -301,4 +301,23 @@ public interface ModAPI {
 	 */
 	void joinServer(String host, int port);
 
+	/**
+	 * Plays a sound to the player.
+	 *
+	 * @param sound the resource key of the sound.
+	 * @param pitch the pitch value of the sound.
+	 * @since 1.0.2
+	 */
+	void playSound(String sound, float pitch);
+
+	/**
+	 * Plays a sound to the player.
+	 *
+	 * @param domain the resource domain of the sound.
+	 * @param sound  the resource key of the sound.
+	 * @param pitch  the pitch value of the sound.
+	 * @since 1.0.2
+	 */
+	void playSound(String domain, String sound, float pitch);
+
 }
