@@ -302,7 +302,7 @@ public interface ModAPI {
 	void joinServer(String host, int port);
 
 	/**
-	 * Plays a sound to the player.
+	 * Plays a sound to the player. Sounds need to be Minecraft vanilla sounds.
 	 *
 	 * @param sound the resource key of the sound.
 	 * @param pitch the pitch value of the sound.
@@ -311,7 +311,7 @@ public interface ModAPI {
 	void playSound(String sound, float pitch);
 
 	/**
-	 * Plays a sound to the player.
+	 * Plays a sound to the player. Sounds need to be either Minecraft vanilla sounds or loaded via an additional resource pack.
 	 *
 	 * @param domain the resource domain of the sound.
 	 * @param sound  the resource key of the sound.
