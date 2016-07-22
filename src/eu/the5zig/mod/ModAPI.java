@@ -195,6 +195,7 @@ public interface ModAPI {
 
 	/**
 	 * @return a list containing all entries of the server player list.
+	 * @since 1.0.3
 	 */
 	List<NetworkPlayerInfo> getServerPlayers();
 
