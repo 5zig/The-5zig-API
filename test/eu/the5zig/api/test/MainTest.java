@@ -8,6 +8,8 @@ import eu.the5zig.mod.event.WorldTickEvent;
 import eu.the5zig.mod.modules.Category;
 import eu.the5zig.mod.plugin.Plugin;
 import eu.the5zig.mod.util.IKeybinding;
+import eu.the5zig.mod.util.NetworkPlayerInfo;
+import eu.the5zig.util.minecraft.ChatColor;
 import org.lwjgl.input.Keyboard;
 
 /**
@@ -45,6 +47,23 @@ public class MainTest {
 		if (keybinding.isPressed()) { // check if the keybinding has been pressed.
 			// if it has been pressed, change the game mode of the player.
 			The5zigAPI.getAPI().sendPlayerMessage("/gamemode 1");
+		}
+
+		// Let's try something different: showing the current ping of all players behind their name in the player list
+		for (NetworkPlayerInfo networkPlayerInfo : The5zigAPI.getAPI().getServerPlayers()) { // first of all, iterate through the player list
+			// Not get the current display name (or player name, if the display name has not been set by the server) and append the players ping
+			String displayName = networkPlayerInfo.getDisplayName();
+			if (displayName == null) {
+				displayName = networkPlayerInfo.getGameProfile().getName();
+			}
+			if (displayName == null) {
+				continue;
+			}
+			int endIndex = displayName.lastIndexOf(" ");
+			if (endIndex != -1) {
+				displayName = displayName.substring(0, endIndex);
+			}
+			networkPlayerInfo.setDisplayName(displayName + ChatColor.GREEN + " " + ChatColor.ITALIC + networkPlayerInfo.getPing());
 		}
 	}
 

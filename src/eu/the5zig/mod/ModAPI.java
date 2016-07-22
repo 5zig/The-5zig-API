@@ -29,6 +29,7 @@ import eu.the5zig.mod.render.Formatting;
 import eu.the5zig.mod.render.RenderHelper;
 import eu.the5zig.mod.server.ServerInstance;
 import eu.the5zig.mod.util.IKeybinding;
+import eu.the5zig.mod.util.NetworkPlayerInfo;
 import eu.the5zig.mod.util.PlayerGameMode;
 import io.netty.buffer.ByteBuf;
 
@@ -191,6 +192,11 @@ public interface ModAPI {
 	 * @return the ip of the server the player is currently playing on.
 	 */
 	String getServer();
+
+	/**
+	 * @return a list containing all entries of the server player list.
+	 */
+	List<NetworkPlayerInfo> getServerPlayers();
 
 	/**
 	 * @return the x-coordinate of the player or of the entity he is currently spectating.
