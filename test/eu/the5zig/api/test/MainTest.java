@@ -1,6 +1,7 @@
 package eu.the5zig.api.test;
 
 import eu.the5zig.mod.The5zigAPI;
+import eu.the5zig.mod.event.ChatSendEvent;
 import eu.the5zig.mod.event.EventHandler;
 import eu.the5zig.mod.event.LoadEvent;
 import eu.the5zig.mod.event.WorldTickEvent;
@@ -44,6 +45,13 @@ public class MainTest {
 		if (keybinding.isPressed()) { // check if the keybinding has been pressed.
 			// if it has been pressed, change the game mode of the player.
 			The5zigAPI.getAPI().sendPlayerMessage("/gamemode 1");
+		}
+	}
+
+	@EventHandler
+	public void onChatSend(ChatSendEvent event) { // called whenever the player wants to send a chat message to the server.
+		if (event.getMessage().equals("I hate 5zig")) {
+			event.setMessage("I love 5zig");
 		}
 	}
 
