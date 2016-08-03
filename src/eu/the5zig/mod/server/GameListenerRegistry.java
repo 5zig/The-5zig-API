@@ -41,6 +41,11 @@ public interface GameListenerRegistry {
 	void switchLobby(String newLobby);
 
 	/**
+	 * @return the current lobby name or {@code null}, if there is no current lobby name.
+	 */
+	String getCurrentLobby();
+
+	/**
 	 * Sends a message from the player and ignores the result of it.
 	 *
 	 * @param message the message that should be sent.
