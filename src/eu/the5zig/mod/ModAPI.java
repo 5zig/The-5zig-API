@@ -151,6 +151,13 @@ public interface ModAPI {
 	void messagePlayer(String message);
 
 	/**
+	 * Sends a message directly to the second chat of the client.
+	 *
+	 * @param message the message that should be sent.
+	 */
+	void messagePlayerInSecondChat(String message);
+
+	/**
 	 * Sends a custom payload to the server.
 	 *
 	 * @param channel the channel the payload should be sent on.
