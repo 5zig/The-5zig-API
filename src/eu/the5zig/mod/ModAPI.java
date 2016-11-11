@@ -74,6 +74,16 @@ public interface ModAPI {
 	void registerModuleItem(Object plugin, String key, Class<? extends AbstractModuleItem> moduleItem, Category category);
 
 	/**
+	 * Registers a new ModuleItem.
+	 *
+	 * @param plugin     the plugin instance.
+	 * @param key        a unique key of the module item.
+	 * @param moduleItem the class of the module item.
+	 * @param category   the category of the module item.
+	 */
+	void registerModuleItem(Object plugin, String key, Class<? extends AbstractModuleItem> moduleItem, String category);
+
+	/**
 	 * Checks if the specified module item is currently activate.
 	 *
 	 * @param key the key of the module item.
