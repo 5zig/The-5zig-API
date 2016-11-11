@@ -31,5 +31,5 @@ public interface Scoreboard {
 	/**
 	 * @return a map, containing all scores together with their name.
 	 */
-	HashMap<Integer, String> getLines();
+	HashMap<String, Integer> getLines();
 }
