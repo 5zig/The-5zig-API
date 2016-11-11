@@ -25,19 +25,20 @@ public abstract class GameMode {
 	 * Stores a unix time stamp that is either used to display the remaining time or current time, depending
 	 * on the {@link #state}.
 	 */
-	private long time;
+	protected long time;
 	/**
 	 * The current game state.
 	 */
-	private GameState state;
+	protected GameState state;
 
 	// Preset fields.
-	private int kills;
-	private int killStreak;
-	private long killStreakTime;
-	private int deaths;
-	private String winner;
-	private boolean respawnable;
+	protected int kills;
+	protected int killStreak;
+	protected long killStreakTime;
+	protected int killstreakDuration = 1000 * 20;
+	protected int deaths;
+	protected String winner;
+	protected boolean respawnable;
 
 	public GameMode() {
 		this.time = -1;
@@ -85,7 +86,7 @@ public abstract class GameMode {
 
 	public void setKillStreak(int killStreak) {
 		this.killStreak = killStreak;
-		this.killStreakTime = System.currentTimeMillis() + 20 * 1000;
+		this.killStreakTime = System.currentTimeMillis() + killstreakDuration;
 	}
 
 	public int getDeaths() {
