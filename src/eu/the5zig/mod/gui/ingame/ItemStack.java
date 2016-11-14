@@ -21,6 +21,11 @@ import java.util.List;
 public interface ItemStack {
 
 	/**
+	 * @return the amount of items in this stack
+	 */
+	int getAmount();
+
+	/**
 	 * @return the maximum durability of the ItemStack.
 	 */
 	int getMaxDurability();
