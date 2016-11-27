@@ -51,6 +51,16 @@ public interface ItemStack {
 	List<String> getLore();
 
 	/**
+	 * @return the food regeneration amount of this item or {@code 0}, if this item is not a food item.
+	 */
+	int getHealAmount();
+
+	/**
+	 * @return the food saturation of this item or {@code 0}, if this item is not a food item.
+	 */
+	float getSaturationModifier();
+
+	/**
 	 * Renders the ItemStack to the screen at given coordinates.
 	 *
 	 * @param x                     the x-position of the ItemStack.
