@@ -155,6 +155,19 @@ public abstract class AbstractGameListener<T extends GameMode> {
 	}
 
 	/**
+	 * Called, whenever the server teleports the client to a new location.
+	 *
+	 * @param gameMode the current game mode instance.
+	 * @param x        the absolute x-coordinate of the player.
+	 * @param y        the absolute y-coordinate of the player.
+	 * @param z        the absolute z-coordinate of the player.
+	 * @param yaw      the yaw-rotation of the player.
+	 * @param pitch    the pitch-rotation of the player.
+	 */
+	public void onTeleport(T gameMode, double x, double y, double z, float yaw, float pitch) {
+	}
+
+	/**
 	 * Called, whenever an {@link ItemStack} gets set into a chest slot.
 	 *
 	 * @param gameMode       the current game mode instance.
