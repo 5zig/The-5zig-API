@@ -232,6 +232,21 @@ public interface ModAPI {
 	double getPlayerPosZ();
 
 	/**
+	 * @return the x-coordinate of the target block.
+	 */
+	int getTargetBlockX();
+
+	/**
+	 * @return the y-coordinate of the target block.
+	 */
+	int getTargetBlockY();
+
+	/**
+	 * @return the z-coordinate of the target block.
+	 */
+	int getTargetBlockZ();
+
+	/**
 	 * @return the current game mode of the player.
 	 */
 	PlayerGameMode getGameMode();
