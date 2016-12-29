@@ -232,6 +232,11 @@ public interface ModAPI {
 	double getPlayerPosZ();
 
 	/**
+	 * @return true, if the player is looking at a block and the block is in range.
+	 */
+	boolean hasTargetBlock();
+
+	/**
 	 * @return the x-coordinate of the target block.
 	 */
 	int getTargetBlockX();
