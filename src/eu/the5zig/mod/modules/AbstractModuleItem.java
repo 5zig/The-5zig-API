@@ -29,6 +29,8 @@ public abstract class AbstractModuleItem {
 	 */
 	ModuleItemProperties properties;
 
+	RenderSettings renderSettings;
+
 	/**
 	 * @return the properties of this module item.
 	 */
@@ -132,6 +134,14 @@ public abstract class AbstractModuleItem {
 	 */
 	protected final String shorten(float f) {
 		return properties.shorten(f);
+	}
+
+	/**
+	 * @return a class that contains various additional settings for the current render pass. The result of this method
+	 * is changed each time before {@link AbstractModuleItem#render(int, int, RenderLocation, boolean)} is called.
+	 */
+	protected RenderSettings getRenderSettings() {
+		return renderSettings;
 	}
 
 }
