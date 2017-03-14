@@ -232,6 +232,16 @@ public interface ModAPI {
 	double getPlayerPosZ();
 
 	/**
+	 * @return the current yaw rotation of the player or the entity he is currently spectating.
+	 */
+	float getPlayerRotationYaw();
+
+	/**
+	 * @return the current pitch rotation of the player or the entity he is currently spectating.
+	 */
+	float getPlayerRotationPitch();
+
+	/**
 	 * @return true, if the player is looking at a block and the block is in range.
 	 */
 	boolean hasTargetBlock();
