@@ -11,8 +11,7 @@ If you have got any further suggestions, feel free to create an issue.
 
 Getting Started
 -
-If you want to get started, see the test directory, as there is a documented example plugin of the mod that uses
-most features of the API.
+If you want to get started, see the examples directory, as there are multiple documented example plugins of the mod.
 
 Dependencies
 -
