@@ -10,6 +10,7 @@ public class MyServerInstance extends ServerInstance {
 	@Override
 	public void registerListeners() {
 		// Register a listener class
+		getGameListener().registerListener(new MyLobbyListener());
 		getGameListener().registerListener(new MyActionBarListener());
 	}
 
