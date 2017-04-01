@@ -112,8 +112,22 @@ public interface ModAPI {
 	 * @param category    the category of the keybinding.
 	 * @return the registered keybinding.
 	 * @see org.lwjgl.input.Keyboard
+	 * @deprecated method misspelled, use {@link #registerKeyBinding(String, int, String)}.
 	 */
+	@Deprecated()
 	IKeybinding registerKeyBiding(String description, int keyCode, String category);
+
+	/**
+	 * Registers a new keybinding.
+	 *
+	 * @param description the name / description of the keybinding.
+	 * @param keyCode     the key code of the keybinding.
+	 * @param category    the category of the keybinding.
+	 * @return the registered keybinding.
+	 * @see org.lwjgl.input.Keyboard
+	 * @since 1.0.11
+	 */
+	IKeybinding registerKeyBinding(String description, int keyCode, String category);
 
 	/**
 	 * @return a class that contains some utility methods for rendering strings and rectangles.
