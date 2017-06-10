@@ -87,6 +87,11 @@ public interface GameListenerRegistry {
 	Set<String> getOnlineFriends();
 
 	/**
+	 * @return a set containing all party members.
+	 */
+	Set<String> getPartyMembers();
+
+	/**
 	 * @return true, if the Minecraft client currently plays on the server instance.
 	 */
 	boolean isOnServer();
