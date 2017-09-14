@@ -29,15 +29,6 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/netty-all-4.0.23.Final.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
           <root url="jar://$MODULE_DIR$/../Minecraft-Utils/libraries/com/mojang/authlib/1.5.22/authlib-1.5.22.jar!/" />
         </CLASSES>
         <JAVADOC />
@@ -57,6 +48,15 @@
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/lib/log4j-core-2.8.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../Minecraft-Utils/libraries/io/netty/netty-all/4.0.23.Final/netty-all-4.0.23.Final.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
