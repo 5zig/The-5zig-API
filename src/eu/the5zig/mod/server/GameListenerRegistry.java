@@ -46,6 +46,18 @@ public interface GameListenerRegistry {
 	String getCurrentLobby();
 
 	/**
+	 * @return the current nick name of the player or {@code null}, if the player is not nicked.
+	 */
+	String getCurrentNick();
+
+	/**
+	 * Sets a new nick name for the player.
+	 *
+	 * @param nickname the new nick name or {@code null}, if the player is not nicked.
+	 */
+	void setCurrentNick(String nickname);
+
+	/**
 	 * Sends a message from the player and ignores the result of it.
 	 *
 	 * @param message the message that should be sent.
